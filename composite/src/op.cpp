@@ -19,3 +19,11 @@ Iterator* Op::create_iterator() {
 Iterator* Op::create_iterator() {
   return new BinaryIterator(this);
 }
+
+Base* Op::get_left() {
+  return nullptr;
+}
+
+Base* Op::get_right() {
+  return nullptr;
+}

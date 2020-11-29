@@ -17,3 +17,11 @@ std::string Rand::stringify() {
 Iterator* Rand::create_iterator() {
   return new BinaryIterator(this);
 }
+
+Base* Rand::get_left() {
+  return nullptr;
+}
+
+Base* Rand::get_right() {
+  return nullptr;
+}

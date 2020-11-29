@@ -21,3 +21,11 @@ std::string Div::stringify() {
 Iterator* Div::create_iterator() {
   return new BinaryIterator(this);
 }
+
+Base* Div::get_left() {
+  return this->left;
+}
+
+Base* Div::get_right() {
+  return this->right;
+}

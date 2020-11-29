@@ -16,3 +16,11 @@ std::string Add::stringify() {
 Iterator* Add::create_iterator() {
   return new BinaryIterator(this);
 }
+
+Base* Add::get_left() {
+  return this->left;
+}
+
+Base* Add::get_right() {
+  return this->right;
+}

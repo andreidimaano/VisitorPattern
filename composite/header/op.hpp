@@ -10,6 +10,8 @@ class Op : public Base
 		virtual double evaluate();
 		virtual std::string stringify();
         Iterator* create_iterator();
+		Base* get_left();
+		Base* get_right();
 	private:
 		double value;
 };

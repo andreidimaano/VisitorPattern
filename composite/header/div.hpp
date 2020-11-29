@@ -10,6 +10,8 @@ class Div : public Base
 		double evaluate() override;
 		std::string stringify() override;
         Iterator* create_iterator();
+		Base* get_left();
+		Base* get_right();
 	private:
 		Base* left;
 		Base* right;

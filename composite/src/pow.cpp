@@ -17,3 +17,11 @@ std::string Pow::stringify() {
 Iterator* Pow::create_iterator() {
   return new BinaryIterator(this);
 }
+
+Base* Pow::get_left() {
+  return this->left;
+}
+
+Base* Pow::get_right() {
+  return this->right;
+}
