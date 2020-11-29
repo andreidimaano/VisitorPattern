@@ -12,3 +12,7 @@ double Add::evaluate() {
 std::string Add::stringify() {
   return (this->left->stringify() + " + " + this->right->stringify());
 }
+
+Iterator* Add::create_iterator() {
+  return new BinaryIterator(this);
+}

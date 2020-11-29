@@ -9,6 +9,7 @@ class Rand : public Base
 		Rand();
 		double evaluate() override;
 		std::string stringify() override;
+        Iterator* create_iterator();
 	private:
 		double value;
 };

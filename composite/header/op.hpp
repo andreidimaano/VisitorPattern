@@ -9,6 +9,7 @@ class Op : public Base
 		Op(double value);
 		virtual double evaluate();
 		virtual std::string stringify();
+        Iterator* create_iterator();
 	private:
 		double value;
 };

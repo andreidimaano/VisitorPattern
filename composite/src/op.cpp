@@ -11,3 +11,11 @@ double Op::evaluate() {
 std::string Op::stringify() {
 	return std::to_string(this->value);
 }
+
+Iterator* Op::create_iterator() {
+  return new BinaryIterator(this);
+}
+
+Iterator* Op::create_iterator() {
+  return new BinaryIterator(this);
+}

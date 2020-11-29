@@ -13,3 +13,7 @@ double Rand::evaluate() {
 std::string Rand::stringify() {
   return std::to_string(this->value);
 }
+
+Iterator* Rand::create_iterator() {
+  return new BinaryIterator(this);
+}
