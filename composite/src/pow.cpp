@@ -25,3 +25,7 @@ Base* Pow::get_left() {
 Base* Pow::get_right() {
   return this->right;
 }
+
+void Pow::accept(CountVisitor* visitor) {
+  visitor->visit_op();
+}
