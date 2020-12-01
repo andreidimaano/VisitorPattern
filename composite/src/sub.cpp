@@ -12,3 +12,15 @@ double Sub::evaluate() {
 std::string Sub::stringify() {
   return (this->left->stringify() + " - " + this->right->stringify());
 }
+
+Iterator* Sub::create_iterator() {
+  return new BinaryIterator(this);
+}
+
+Base* Sub::get_left() {
+  return this->left;
+}
+
+Base* Sub::get_right() {
+  return this->right;
+}

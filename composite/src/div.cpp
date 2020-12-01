@@ -17,3 +17,15 @@ double Div::evaluate() {
 std::string Div::stringify() {
   return (this->left->stringify() + " / " + this->right->stringify());
 }
+
+Iterator* Div::create_iterator() {
+  return new BinaryIterator(this);
+}
+
+Base* Div::get_left() {
+  return this->left;
+}
+
+Base* Div::get_right() {
+  return this->right;
+}

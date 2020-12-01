@@ -11,3 +11,15 @@ double Op::evaluate() {
 std::string Op::stringify() {
 	return std::to_string(this->value);
 }
+
+Iterator* Op::create_iterator() {
+  return new NullIterator(this);
+}
+
+Base* Op::get_left() {
+  return nullptr;
+}
+
+Base* Op::get_right() {
+  return nullptr;
+}

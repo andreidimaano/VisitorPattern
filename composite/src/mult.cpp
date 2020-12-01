@@ -12,3 +12,15 @@ double Mult::evaluate() {
 std::string Mult::stringify() {
   return (this->left->stringify() + " * " + this->right->stringify());
 }
+
+Iterator* Mult::create_iterator() {
+  return new BinaryIterator(this);
+}
+
+Base* Mult::get_left() {
+  return this->left;
+}
+
+Base* Mult::get_right() {
+  return this->right;
+}
