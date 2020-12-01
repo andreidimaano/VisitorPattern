@@ -25,3 +25,7 @@ Base* Rand::get_left() {
 Base* Rand::get_right() {
   return nullptr;
 }
+
+void Rand::accept(CountVisitor* visitor) {
+   visitor->visit_rand();
+}
