@@ -3,6 +3,7 @@
 
 #include "../../base.hpp"
 #include "../../iterator.hpp"
+#include "../../visitor.hpp"
 
 class Div : public Base
 {
@@ -13,6 +14,7 @@ class Div : public Base
         Iterator* create_iterator();
 		Base* get_left();
 		Base* get_right();
+		virtual void accept(CountVisitor*);
 	private:
 		Base* left;
 		Base* right;
