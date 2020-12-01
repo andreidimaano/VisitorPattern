@@ -24,3 +24,7 @@ Base* Add::get_left() {
 Base* Add::get_right() {
   return this->right;
 }
+
+void Add::accept(CountVisitor* visitor) {
+  visitor->visit_add();
+}
