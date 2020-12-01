@@ -5,6 +5,7 @@
 #include "iterator.hpp"
 
 class Iterator;
+class CountVisitor;
 
 class Base {
 	public:

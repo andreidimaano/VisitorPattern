@@ -32,7 +32,7 @@ TEST(ClassOperandTest, OpGetRight){
 TEST(ClassOperandTest, OpVisitor){
     Base* test = new Op(1);
     Base* dummyNode = new Op(0);
-    Base* dummy = new Add(test, 0);
+    Base* dummy = new Add(test, dummyNode);
 
     PreorderIterator* it = new PreorderIterator(dummy);
 
@@ -44,7 +44,7 @@ TEST(ClassOperandTest, OpVisitor){
         it->next();
     }
 
-    EXPECT_EQ(visitor->op_count(), 1);
+    EXPECT_EQ(visitor->op_count(), 2);
     EXPECT_EQ(visitor->add_count(), 0);
 }
 

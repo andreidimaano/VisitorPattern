@@ -12,7 +12,7 @@ class CountVisitor{
         int pow;
 
     public:
-        CountVisitor();
+        CountVisitor(): ops(0), add(0){}
 
         void visit_op() {
             this->ops++;
@@ -26,8 +26,12 @@ class CountVisitor{
         int mult_count();
         void visit_div();
         int div_count();
-        void visit_add();
-        int add_count();
+        void visit_add(){
+	   this->add++;
+	}
+        int add_count(){
+	   return add;
+	}
         void visit_sub();
         int sub_count();
         void visit_pow();

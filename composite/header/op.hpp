@@ -14,7 +14,7 @@ class Op : public Base
         Iterator* create_iterator();
 		Base* get_left();
 		Base* get_right();
-		void accept(CountVisitor*);
+		virtual void accept(CountVisitor*);
 	private:
 		double value;
 };
