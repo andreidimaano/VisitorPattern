@@ -13,10 +13,6 @@ std::string Op::stringify() {
 }
 
 Iterator* Op::create_iterator() {
-  return new BinaryIterator(this);
-}
-
-Iterator* Op::create_iterator() {
   return new NullIterator(this);
 }
 

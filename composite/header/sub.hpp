@@ -1,5 +1,5 @@
 #ifndef SUB_H
-#define DUB_H
+#define SUB_H
 
 #include "../../base.hpp"
 
@@ -17,5 +17,4 @@ class Sub : public Base
 		Base* left; 
 		Base* right;
 };
-#endif#ifndef SUB_H
-#define DUB_H
+#endif
