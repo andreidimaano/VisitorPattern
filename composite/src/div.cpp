@@ -31,5 +31,5 @@ Base* Div::get_right() {
 }
 
 void Div::accept(CountVisitor* visitor) {
-  visitor->visit_op();
+  visitor->visit_div();
 }
