@@ -25,5 +25,5 @@ Base* Op::get_right() {
 }
 
 void Op::accept(CountVisitor* visitor) {
-  visitor->visit_op();
+   visitor->visit_op();
 }
