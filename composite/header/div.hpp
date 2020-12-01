@@ -2,6 +2,7 @@
 #define DIV_H
 
 #include "../../base.hpp"
+#include "../../iterator.hpp"
 
 class Div : public Base
 {

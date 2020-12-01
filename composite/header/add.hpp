@@ -2,6 +2,7 @@
 #define ADD_H
 
 #include "../../base.hpp"
+#include "../../iterator.hpp"
 
 class Add : public Base
 {

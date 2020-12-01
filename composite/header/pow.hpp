@@ -2,6 +2,7 @@
 #define POW_H
 
 #include "../../base.hpp"
+#include "../../iterator.hpp"
 
 class Pow : public Base
 {

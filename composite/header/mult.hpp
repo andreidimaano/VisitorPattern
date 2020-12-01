@@ -2,6 +2,7 @@
 #define MULT_H
 
 #include "../../base.hpp"
+#include "../../iterator.hpp"
 
 class Mult : public Base
 {

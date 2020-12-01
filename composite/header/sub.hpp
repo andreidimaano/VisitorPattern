@@ -2,6 +2,7 @@
 #define SUB_H
 
 #include "../../base.hpp"
+#include "../../iterator.hpp"
 
 class Sub : public Base
 {

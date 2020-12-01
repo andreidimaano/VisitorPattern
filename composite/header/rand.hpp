@@ -2,6 +2,7 @@
 #define RAND_H
 
 #include "../../base.hpp"
+#include "../../iterator.hpp"
 
 class Rand : public Base
 {
