@@ -29,3 +29,7 @@ Base* Div::get_left() {
 Base* Div::get_right() {
   return this->right;
 }
+
+void Div::accept(CountVisitor* visitor) {
+  visitor->visit_op();
+}
