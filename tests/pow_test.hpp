@@ -32,7 +32,7 @@ TEST(ClassPowerTest, PowGetRight){
     EXPECT_EQ(exponent->get_right()->evaluate(), two->evaluate());
 }
 
-TEST(ClassPowisionTest, PowVisitor){
+TEST(ClassPowerTest, PowVisitor){
     Base* num1 = new Op(1);
     Base* num2 = new Op(2);
     Base* test = new Pow(num1, num2);
@@ -55,7 +55,7 @@ TEST(ClassPowisionTest, PowVisitor){
 }
 
 // (1 / 2) / 3
-TEST(ClassPowisionTest, PowVisitor2){
+TEST(ClassPowerTest, PowVisitor2){
     Base* num1 = new Op(1);
     Base* num2 = new Op(2);
     Base* Pow1 = new Pow(num1, num2);
@@ -81,7 +81,7 @@ TEST(ClassPowisionTest, PowVisitor2){
 }
 
 // ((1 / 2) / 3) / 4
-TEST(ClassPowisionTest, PowVisitor3){
+TEST(ClassPowerTest, PowVisitor3){
     Base* num1 = new Op(1);
     Base* num2 = new Op(2);
     Base* Pow1 = new Pow(num1, num2);

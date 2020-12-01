@@ -27,5 +27,5 @@ Base* Pow::get_right() {
 }
 
 void Pow::accept(CountVisitor* visitor) {
-  visitor->visit_op();
+  visitor->visit_pow();
 }
