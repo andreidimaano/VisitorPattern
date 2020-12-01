@@ -3,6 +3,7 @@
 
 #include "../../base.hpp"
 #include "../../iterator.hpp"
+#include "../../visitor.hpp"
 
 class Rand : public Base
 {
@@ -13,6 +14,7 @@ class Rand : public Base
         Iterator* create_iterator();
 		Base* get_left();
 		Base* get_right();
+		virtual void accept(CountVisitor*);
 	private:
 		double value;
 };

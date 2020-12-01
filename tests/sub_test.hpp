@@ -18,7 +18,7 @@ TEST(ClassSubtractionTest, subIterator){
 }
 
 //get left
-TEST(ClasssubtractionTest, subGetLeft){
+TEST(ClassSubtractionTest, subGetLeft){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* sum = new Sub(one, two);
@@ -27,7 +27,7 @@ TEST(ClasssubtractionTest, subGetLeft){
 }
 
 //get right
-TEST(ClasssubtractionTest, subGetRight){
+TEST(ClassSubtractionTest, subGetRight){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* sum = new Sub(one, two);
@@ -35,7 +35,7 @@ TEST(ClasssubtractionTest, subGetRight){
     EXPECT_EQ(sum->get_right()->evaluate(), two->evaluate());
 }
 
-TEST(ClasssubtractionTest, SubVisitor) {
+TEST(ClassSubtractionTest, SubVisitor) {
     Base* test = new Op(1);
     Base* dummyNode = new Op(2);
     Base* dummy = new Sub(test, dummyNode);
@@ -52,5 +52,59 @@ TEST(ClasssubtractionTest, SubVisitor) {
 
     EXPECT_EQ(visitor->op_count(), 2);
     EXPECT_EQ(visitor->sub_count(), 0);
+}
+
+TEST(ClassSubtractionTest, SubVisitor2){
+    Base* num1 = new Op(1);
+    Base* num2 = new Op(2);
+    Base* Sub1 = new Sub(num1, num2);
+
+    Base* num3 = new Op(3);
+    Base* test = new Sub(Sub1, num3);
+
+    Base* dummyNode = new Op(0);
+    Base* dummy = new Sub(test, dummyNode);
+
+    Iterator* it = new PreorderIterator(dummy);
+
+    CountVisitor* visitor = new CountVisitor();
+    it->first();
+    while(!it->is_done()){
+        Base* currentExpression = it->current();
+        currentExpression->accept(visitor);
+        it->next();
+    }
+
+    EXPECT_EQ(visitor->op_count(), 4);
+    EXPECT_EQ(visitor->sub_count(), 2);
+}
+
+// ((1 / 2) / 3) / 4
+TEST(ClassSubtractionTest, SubVisitor3){
+    Base* num1 = new Op(1);
+    Base* num2 = new Op(2);
+    Base* Sub1 = new Sub(num1, num2);
+
+    Base* num3 = new Op(3);
+    Base* Sub2 = new Sub(Sub1, num3);
+
+    Base* num4 = new Op(4);
+    Base* test = new Sub(Sub2, num4);
+
+    Base* dummyNode = new Op(0);
+    Base* dummy = new Sub(test, dummyNode);
+
+    Iterator* it = new PreorderIterator(dummy);
+
+    CountVisitor* visitor = new CountVisitor();
+    it->first();
+    while(!it->is_done()){
+        Base* currentExpression = it->current();
+        currentExpression->accept(visitor);
+        it->next();
+    }
+
+    EXPECT_EQ(visitor->op_count(), 5);
+    EXPECT_EQ(visitor->sub_count(), 3);
 }
 #endif

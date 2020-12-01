@@ -6,6 +6,7 @@
 #include "mult_test.hpp"
 #include "op_test.hpp"
 #include "sub_test.hpp"
+#include "integrationtest.hpp"
 
 
 int main(int argc, char **argv) {
