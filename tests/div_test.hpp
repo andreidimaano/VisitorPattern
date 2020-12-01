@@ -32,7 +32,7 @@ TEST(ClassDivisionTest, DivGetRight){
     EXPECT_EQ(exponent->get_right()->evaluate(), two->evaluate());
 }
 
-TEST(ClassDivisionTest, OpVisitor){
+TEST(ClassDivisionTest, DivVisitor){
     Base* num1 = new Op(1);
     Base* num2 = new Op(2);
     Base* test = new Div(num1, num2);
@@ -55,7 +55,7 @@ TEST(ClassDivisionTest, OpVisitor){
 }
 
 // (1 / 2) / 3
-TEST(ClassDivisionTest, OpVisitor2){
+TEST(ClassDivisionTest, DivVisitor2){
     Base* num1 = new Op(1);
     Base* num2 = new Op(2);
     Base* div1 = new Div(num1, num2);
@@ -81,7 +81,7 @@ TEST(ClassDivisionTest, OpVisitor2){
 }
 
 // ((1 / 2) / 3) / 4
-TEST(ClassDivisionTest, OpVisitor3){
+TEST(ClassDivisionTest, DivVisitor3){
     Base* num1 = new Op(1);
     Base* num2 = new Op(2);
     Base* div1 = new Div(num1, num2);
