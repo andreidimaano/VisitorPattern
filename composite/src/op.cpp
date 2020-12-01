@@ -23,3 +23,7 @@ Base* Op::get_left() {
 Base* Op::get_right() {
   return nullptr;
 }
+
+void Op::accept(CountVisitor* visitor) {
+   visitor->visit_op();
+}

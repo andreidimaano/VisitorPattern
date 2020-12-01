@@ -3,6 +3,9 @@
 
 #include "gtest/gtest.h"
 #include "../composite/header/op.hpp"
+#include "../composite/header/sub.hpp"
+#include "../iterator.hpp"
+#include "../visitor.hpp"
 
 //create iterator
 TEST(ClassOperandTest, OpIterator){

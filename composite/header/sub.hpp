@@ -3,6 +3,7 @@
 
 #include "../../base.hpp"
 #include "../../iterator.hpp"
+#include "../../visitor.hpp"
 
 class Sub : public Base
 {
@@ -11,9 +12,10 @@ class Sub : public Base
 		Sub(Base* left, Base* right);
 		double evaluate() override;
 		std::string stringify() override;
-        Iterator* create_iterator();
+                Iterator* create_iterator();
 		Base* get_left();
 		Base* get_right();
+		virtual void accept(CountVisitor*);
 	private:
 		Base* left; 
 		Base* right;
