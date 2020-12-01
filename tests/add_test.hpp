@@ -14,17 +14,16 @@ TEST(AdditionTest, AddIterator){
     EXPECT_TRUE(sum->create_iterator() != nullptr);
 }
 //get left
-TEST(AdditionTest1, AddGetLeft){
+TEST(AdditionTest, AddGetLeft){
       Base* one = new Op(1);
       Base* two = new Op(2);
       Base* sum = new Add(one, two);
     
-    //EXPECT_EQ(sum->get_left()->evaluate(), one->evaluate());
+    EXPECT_EQ(sum->get_left()->evaluate(), one->evaluate());
 }
 
-
 //get right
-TEST(AdditionTest2, AddIterator){
+TEST(AdditionTest, AddGetRight){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* sum = new Add(one, two);

@@ -12,14 +12,14 @@ TEST(ClassOperandTest, OpIterator){
 }
 
 //get left
-TEST(ClassOperandTest1, OpGetLeft){
+TEST(ClassOperandTest, OpGetLeft){
     Base* one = new Op(1);
     
     EXPECT_TRUE(one->get_left() == nullptr);
 }
 
 //get right
-TEST(ClassOperandTest2, OpIterator){
+TEST(ClassOperandTest, OpGetRight){
     Base* one = new Op(1);
     
     EXPECT_TRUE(one->get_right() == nullptr);

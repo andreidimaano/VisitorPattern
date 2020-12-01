@@ -6,7 +6,7 @@
 #include "../composite/header/pow.hpp"
 
 //create iterator
-TEST(ClassPowerTest1, PowIterator){
+TEST(ClassPowerTest, PowIterator){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* exponent = new Pow(one, two);
@@ -15,7 +15,7 @@ TEST(ClassPowerTest1, PowIterator){
 }
 
 //get left
-TEST(ClassPowerTest2, PowGetLeft){
+TEST(ClassPowerTest, PowGetLeft){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* exponent = new Pow(one, two);
@@ -24,7 +24,7 @@ TEST(ClassPowerTest2, PowGetLeft){
 }
 
 //get right
-TEST(ClassPowerTest3, PowIterator){
+TEST(ClassPowerTest, PowGetRight){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* exponent = new Pow(one, two);

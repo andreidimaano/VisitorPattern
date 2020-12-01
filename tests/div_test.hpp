@@ -6,7 +6,7 @@
 #include "../composite/header/div.hpp"
 
 //create iterator
-TEST(ClassDivisionTest1, DivIterator){
+TEST(ClassDivisionTest, DivIterator){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* exponent = new Div(one, two);
@@ -15,7 +15,7 @@ TEST(ClassDivisionTest1, DivIterator){
 }
 
 //get left
-TEST(ClassDivisionTest2, DivGetLeft){
+TEST(ClassDivisionTest, DivGetLeft){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* exponent = new Div(one, two);
@@ -24,7 +24,7 @@ TEST(ClassDivisionTest2, DivGetLeft){
 }
 
 //get right
-TEST(ClassDivisionTest3, DivIterator){
+TEST(ClassDivisionTest, DivGetRight){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* exponent = new Div(one, two);
