@@ -24,3 +24,7 @@ Base* Sub::get_left() {
 Base* Sub::get_right() {
   return this->right;
 }
+
+void Sub::accept(CountVisitor* visitor) {
+   visitor->visit_sub();
+}
