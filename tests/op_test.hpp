@@ -34,7 +34,7 @@ TEST(ClassOperandTest, OpVisitor){
     Base* dummyNode = new Op(0);
     Base* dummy = new Add(test, dummyNode);
 
-    PreorderIterator* it = new PreorderIterator(dummy);
+    Iterator* it = new PreorderIterator(dummy);
 
     CountVisitor* visitor = new CountVisitor();
     it->first();
