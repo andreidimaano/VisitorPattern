@@ -12,7 +12,7 @@ class CountVisitor{
         int pow;
 
     public:
-        CountVisitor(): ops(0), sub(0), add(0), divs(0), pow(0){}
+        CountVisitor(): ops(0), sub(0), add(0), divs(0), pow(0), mults(0){}
         void visit_op() {
             this->ops++;
         }
@@ -21,8 +21,12 @@ class CountVisitor{
         }
         void visit_rand();
         int rand_count();
-        void visit_mult();
-        int mult_count();
+        void visit_mult(){
+	     this->mults++;
+	}
+        int mult_count(){
+	    return this->mults;
+	}
         void visit_div(){
             this->divs++;
         }
