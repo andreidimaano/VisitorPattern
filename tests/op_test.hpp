@@ -5,21 +5,21 @@
 #include "../composite/header/op.hpp"
 
 //create iterator
-TEST(ClassOperandisionTest, OpIterator){
+TEST(ClassOperandTest, OpIterator){
     Base* one = new Op(1);
     
     EXPECT_TRUE(one->create_iterator() != nullptr);
 }
 
 //get left
-TEST(ClassOpisionTest, OpGetLeft){
+TEST(ClassOperandTest1, OpGetLeft){
     Base* one = new Op(1);
     
     EXPECT_TRUE(one->get_left() == nullptr);
 }
 
 //get right
-TEST(ClassOpisionTest, OpIterator){
+TEST(ClassOperandTest2, OpIterator){
     Base* one = new Op(1);
     
     EXPECT_TRUE(one->get_right() == nullptr);

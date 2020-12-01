@@ -6,7 +6,7 @@
 #include "../composite/header/sub.hpp"
 
 //create iterator
-TEST(ClassSubtractionTest, subIterator){
+TEST(ClassSubtractionTest1, subIterator){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* sum = new Sub(one, two);
@@ -15,7 +15,7 @@ TEST(ClassSubtractionTest, subIterator){
 }
 
 //get left
-TEST(ClasssubtractionTest, subGetLeft){
+TEST(ClasssubtractionTest2, subGetLeft){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* sum = new Sub(one, two);
@@ -24,7 +24,7 @@ TEST(ClasssubtractionTest, subGetLeft){
 }
 
 //get right
-TEST(ClasssubtractionTest, subIterator){
+TEST(ClasssubtractionTest3, subIterator){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* sum = new Sub(one, two);

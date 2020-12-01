@@ -6,7 +6,7 @@
 #include "../composite/header/mult.hpp"
 
 //create iterator
-TEST(ClassMultisionTest, MultIterator){
+TEST(ClassMultisionTest1, MultIterator){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* exponent = new Mult(one, two);
@@ -15,7 +15,7 @@ TEST(ClassMultisionTest, MultIterator){
 }
 
 //get left
-TEST(ClassMultisionTest, MultGetLeft){
+TEST(ClassMultisionTest2, MultGetLeft){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* exponent = new Mult(one, two);
@@ -24,7 +24,7 @@ TEST(ClassMultisionTest, MultGetLeft){
 }
 
 //get right
-TEST(ClassMultisionTest, MultIterator){
+TEST(ClassMultisionTest3, MultIterator){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* exponent = new Mult(one, two);

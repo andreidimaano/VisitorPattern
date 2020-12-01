@@ -15,6 +15,8 @@ ADD_EXECUTABLE(test
         composite/src/mult.cpp
 	composite/src/div.cpp
 	composite/src/pow.cpp
+	binary_iterator.cpp
+	preorder_iterator.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)

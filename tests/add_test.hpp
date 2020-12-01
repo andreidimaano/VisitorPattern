@@ -1,21 +1,20 @@
-#ifndef ADDTESTH
-#define ADDTESTH
+#ifndef __CLASS_ADD_TEST__
+#define __CLASS_ADD_TEST__
 
 #include "gtest/gtest.h"
 #include "../composite/header/op.hpp"
 #include "../composite/header/add.hpp"
 
 //create iterator
-TEST(ClassAdditionTest, AddIterator){
+TEST(AdditionTest, AddIterator){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* sum = new Add(one, two);
     
     EXPECT_TRUE(sum->create_iterator() != nullptr);
 }
-/*
 //get left
-TEST(ClassAdditionTest, AddGetLeft){
+TEST(AdditionTest1, AddGetLeft){
       Base* one = new Op(1);
       Base* two = new Op(2);
       Base* sum = new Add(one, two);
@@ -25,7 +24,7 @@ TEST(ClassAdditionTest, AddGetLeft){
 
 
 //get right
-TEST(ClassAdditionTest, AddIterator){
+TEST(AdditionTest2, AddIterator){
     Base* one = new Op(1);
     Base* two = new Op(2);
     Base* sum = new Add(one, two);
@@ -33,5 +32,5 @@ TEST(ClassAdditionTest, AddIterator){
     EXPECT_EQ(sum->get_right()->evaluate(), two->evaluate());
 }
 
-*/
-#endif
+
+#endif //__Add_TEST_HPP__
