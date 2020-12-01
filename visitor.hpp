@@ -38,8 +38,12 @@ class CountVisitor{
 	    }
         void visit_sub();
         int sub_count();
-        void visit_pow();
-        int pow_count();
+        void visit_pow() {
+            this->pow++;
+        }
+        int pow_count(){
+            return pow;
+        }
 
 };
 
