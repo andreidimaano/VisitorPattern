@@ -15,7 +15,7 @@ std::string Rand::stringify() {
 }
 
 Iterator* Rand::create_iterator() {
-  return new BinaryIterator(this);
+  return new NullIterator(this);
 }
 
 Base* Rand::get_left() {

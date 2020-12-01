@@ -17,7 +17,7 @@ Iterator* Op::create_iterator() {
 }
 
 Iterator* Op::create_iterator() {
-  return new BinaryIterator(this);
+  return new NullIterator(this);
 }
 
 Base* Op::get_left() {
