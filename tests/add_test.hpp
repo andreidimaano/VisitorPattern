@@ -35,8 +35,10 @@ TEST(AdditionTest, AddGetRight){
 }
 
 TEST(AdditionTest, AddVisitorTest){
-    Base* test = new Op(1);
-    Base* dummyNode = new Op(2);
+    Base* num1 = new Op(1);
+    Base* num2 = new Op(2);
+    Base* test = new Add(num1, num2);
+    Base* dummyNode = new Op(0);
     Base* dummy = new Add(test, dummyNode);
 
     Iterator* it = new PreorderIterator(dummy);
@@ -49,8 +51,8 @@ TEST(AdditionTest, AddVisitorTest){
 	it->next();
     }
 
-    EXPECT_EQ(visitor->op_count(), 2);
-    EXPECT_EQ(visitor->add_count(), 0);
+    EXPECT_EQ(visitor->op_count(), 3);
+    EXPECT_EQ(visitor->add_count(), 1);
 }
 
 TEST(ClassAdditionTest, AddVisitor2){

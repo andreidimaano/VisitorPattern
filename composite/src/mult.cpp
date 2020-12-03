@@ -26,5 +26,5 @@ Base* Mult::get_right() {
 }
 
 void Mult::accept(CountVisitor* visitor) {
-   visitor->visit_sub();
+   visitor->visit_mult();
 }
