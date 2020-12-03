@@ -39,13 +39,13 @@ class CountVisitor{
         }
         void visit_add(){
 	          this->add++;
-	      }
+	}
         int add_count(){
 	        return this->add;
-	      }
+	}
         void visit_sub() {
 	          this->sub++;
-			  }
+	}
         int sub_count() {
             return this->sub; 
 		    }

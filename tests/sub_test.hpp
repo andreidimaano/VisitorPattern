@@ -36,7 +36,9 @@ TEST(ClassSubtractionTest, subGetRight){
 }
 
 TEST(ClassSubtractionTest, SubVisitor) {
-    Base* test = new Op(1);
+    Base* num1 = new Op(1);
+    Base* num2 = new Op(1);
+    Base* test = new Sub(num1, num2);
     Base* dummyNode = new Op(2);
     Base* dummy = new Sub(test, dummyNode);
 
@@ -50,8 +52,8 @@ TEST(ClassSubtractionTest, SubVisitor) {
 	 it->next();
     }
 
-    EXPECT_EQ(visitor->op_count(), 2);
-    EXPECT_EQ(visitor->sub_count(), 0);
+    EXPECT_EQ(visitor->op_count(), 3);
+    EXPECT_EQ(visitor->sub_count(), 1);
 }
 
 TEST(ClassSubtractionTest, SubVisitor2){
