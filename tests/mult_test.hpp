@@ -4,6 +4,8 @@
 #include "gtest/gtest.h"
 #include "../composite/header/op.hpp"
 #include "../composite/header/mult.hpp"
+#include "../iterator.hpp"
+#include "../visitor.hpp"
 
 //create iterator
 TEST(ClassMultisionTest, MultIterator){
@@ -92,7 +94,6 @@ TEST(ClassMultiplicationTest, MultVisitor3){
 
     Base* dummyNode = new Op(0);
     Base* dummy = new Mult(test, dummyNode);
-
     Iterator* it = new PreorderIterator(dummy);
 
     CountVisitor* visitor = new CountVisitor();
@@ -106,6 +107,4 @@ TEST(ClassMultiplicationTest, MultVisitor3){
     EXPECT_EQ(visitor->op_count(), 5);
     EXPECT_EQ(visitor->mult_count(), 3);
 }
-
-
 #endif
